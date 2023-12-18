@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+body{
+  margin: 0;
+  padding: 0;
+}
+    .maincontainer{
+      width: 100%;
+      height: 100vh;
+      background-image: url(photo.jpg);
+background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .firstcontainer{
+      width: 20%;
+      height: 50%;
+      backdrop-filter: blur(40px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .weather{
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+
+    .photodiv{
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: top;
+ height: 50%;
+      
+    }
+.weatherphoto{
+  align-self: top;
+}
+    .temp{
+      font-size: 60px;
+      padding: 0;
+      margin: 0;
+     
+    }
+
+    .phototitle{
+      font-size: 30px;
+    }
+
+    .tempdiv{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50%;
+    }
+
+    .weathertitle{
+height: 70%;
+    }
+    
+    .weatherinput{
+height: 10%;
+border: 3px solid black;
+font-size: 15px;
+    }
+    .weatherbutton{
+height: 10%;
+    }
+    .weatherbutton:hover{
+      background-color: black;
+      border: 3px solid white;
+      color: white;
+    }
+.demotem{
+  font-size: 30px;
+}
+.demohum{
+  font-size: 30px;
+}
+
+.button{
+  border-radius: 10px;
+  border: 3px solid black;
+}
+
+@media (max-width:1025px){
+ .maincontainer{
+  flex-direction: column;
+  height: auto;
+ }
+ .firstcontainer{
+  width: 90%;
+  height: 300px;
+ 
+}
+.weatherbutton{
+  margin-top: 5px;
+}
+ 
+
+
+}
+  </style>
+
+
+<body>
+ <div class="maincontainer">
+  <div class="firstcontainer first">
+    <h1 class="weather title">WEATHER </h1>
+    <input class="weatherinput city" type="text" name="cityname" id="city" placeholder="Enter the place name">
+    <button class="weatherbutton button" type="button">Search</button>   
+    </div> 
+    
+     <div class="firstcontainer">
+      <div class="tempdiv">
+        <h3 class="phototitle">Temperature</h3>
+      </div>
+
+      <div class="photodiv">
+
+        <img class="weatherphoto" src="weather-app.png" width="60px" height="60px" alt="">
+        <p class="temp"></p>
+      </div>
+</div> 
+    
+    <div class="firstcontainer">
+<p class=" demotem "></p>  
+<p class=" demohum "></p>  
+
+</div>  
+ </div>
+   <script src="script.js"></script>
+</body>
+</html>
