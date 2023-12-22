@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <style>
     
@@ -19,130 +20,211 @@ background-size: cover;
       display: flex;
       justify-content: center;
       align-items: center;
+    
     }
 
 
     .firstcontainer{
-      width: 20%;
-      height: 50%;
+      width: 35%;
+      height: 100px;
       backdrop-filter: blur(40px);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 15px;
-    }
-
-    .weather{
-      padding: 0;
-      margin: 0;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-
-    .photodiv{
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      align-items: top;
- height: 50%;
+      border: 1px solid white;
+      border-radius: 10px;
+      position: relative;
       
     }
-.weatherphoto{
-  align-self: top;
-}
-    .temp{
-      font-size: 60px;
-      padding: 0;
-      margin: 0;
-     
+
+    .weatherinput{
+      background-color: transparent;
+      outline: none;
+      border: none;
+      font-size: 20px;
+      color: white;
     }
 
-    .phototitle{
-      font-size: 30px;
-    }
 
-    .tempdiv{
+    .weatherinput::placeholder{
+    color: white;
+    }
+    .first{
+      position:absolute;
+      top: 25px;
+      width: 70%;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 50%;
+      gap: 15px;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid white;
     }
-
-    .weathertitle{
-height: 70%;
-    }
-    
-    .weatherinput{
-height: 10%;
-border: 3px solid black;
-font-size: 15px;
-    }
-    .weatherbutton{
-height: 10%;
-    }
-    .weatherbutton:hover{
-      background-color: black;
-      border: 3px solid white;
-      color: white;
-    }
-.demotem{
-  font-size: 30px;
-}
-.demohum{
-  font-size: 30px;
+.bx-search-alt{
+  cursor: pointer;
 }
 
-.button{
-  border-radius: 10px;
-  border: 3px solid black;
+.secondcontainer{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+ visibility: hidden;
+
+
+ 
+  
 }
 
-@media (max-width:1025px){
- .maincontainer{
+
+
+.temp{
+  font-size: 60px;
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.temp span{
+  font-size: 25px;
+  position: absolute;
+  top:10px;
+}
+.weather{
+  font-size: 25px;
+  margin: 0;
+}
+
+.seconddiv{
+  width: 50%;
+  display: flex;
   flex-direction: column;
-  height: auto;
- }
- .firstcontainer{
-  width: 90%;
-  height: 300px;
- 
-}
-.weatherbutton{
-  margin-top: 5px;
-}
- 
+  justify-content: center;
+  align-items: center;
 
 
 }
-  </style>
+.thirdcontainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  visibility: hidden;
+}
 
+.tfirst{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.secondcontainer p{
+  font-weight: 1000;
+  color: white;
+}
+
+  
+
+.tfirst p{
+  margin: 0;
+  font-size: 20px;
+  color: white;
+  font-weight: 1000;
+}
+
+.divison{
+  margin-left: 7px;
+}
+.show{
+ visibility: visible;
+}
+
+.firstheight{
+  height: 500px;
+}
+
+@media screen and (max-width: 800px) {
+
+  .firstcontainer{
+      width: 60%;
+   
+  }
+
+}
+@media screen and (max-width: 400px) {
+
+  .firstcontainer{
+      width: 90%;
+    
+  }
+  .weatherinput{
+    font-size: 15px;
+  }
+.first{
+
+  width:80%;
+}
+
+
+.seconddiv .temp{
+  font-size: 50px;
+}
+}
+
+.secondcontainer img{
+  width: 200px;
+  height: 200px;
+}
+
+
+
+</style>
 
 <body>
  <div class="maincontainer">
-  <div class="firstcontainer first">
-    <h1 class="weather title">WEATHER </h1>
-    <input class="weatherinput city" type="text" name="cityname" id="city" placeholder="Enter the place name">
-    <button class="weatherbutton button" type="button">Search</button>   
-    </div> 
-    
-     <div class="firstcontainer">
-      <div class="tempdiv">
-        <h3 class="phototitle">Temperature</h3>
+  <div class="firstcontainer ">
+   <div class=" first">
+
+     <i class='bx bxs-map bx-sm'  style="color:white"></i>
+     <input class="weatherinput" id="city" type="text" name="cityname" id="city" placeholder="Enter the place name">
+     <i class='bx bx-search-alt bx-sm search' style="color:white"></i>
+    </div>
+  
+    <div class="secondcontainer display">
+      <img id="image" width="260px" height="260px" src="snow.png" alt="">
+     <div class="seconddiv">
+
+       <p class="temp"> 19 °C</p>
+       <p class="weather demotem">broken clouds</p>
       </div>
+    </div>
 
-      <div class="photodiv">
+<div class="thirdcontainer display">
+<div class="tfirst">
+  <i class='bx bx-water bx-lg' style='color:#f3eaea'  ></i>
+  <div class="divison">
+    <p class="demohum">0%</p>
+    <p>Humidity</p>
+  </div>
+</div>
+<div class="tfirst">
+  <i class='bx bx-wind bx-lg' style="color:white"></i>
+  <div class="divison">
+<p class="windspeed">0km/h</p>
+<p>wind speed</p>
+  </div>
+</div>
 
-        <img class="weatherphoto" src="weather-app.png" width="60px" height="60px" alt="">
-        <p class="temp"></p>
-      </div>
-</div> 
+</div>
+
+  </div> 
     
-    <div class="firstcontainer">
-<p class=" demotem "></p>  
-<p class=" demohum "></p>  
-
 </div>  
  </div>
    <script src="script.js"></script>
