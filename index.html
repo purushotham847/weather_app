@@ -26,7 +26,7 @@ background-size: cover;
 
     .firstcontainer{
       width: 35%;
-      height: 100px;
+      height: 200px;
       backdrop-filter: blur(40px);
       display: flex;
       flex-direction: column;
@@ -53,7 +53,7 @@ background-size: cover;
     }
     .first{
       position:absolute;
-      top: 25px;
+      top: 100px;
       width: 70%;
       display: flex;
       justify-content: center;
@@ -146,7 +146,7 @@ background-size: cover;
 }
 
 .firstheight{
-  height: 500px;
+  height: 600px;
 }
 
 @media screen and (max-width: 800px) {
@@ -182,18 +182,27 @@ background-size: cover;
   height: 200px;
 }
 
-
+.toptitle{
+  position: absolute;
+  top: 10px;
+  align-items: center;
+text-align: center;
+  font-weight: 1000;
+  color: white;
+}
 
 </style>
 
 <body>
  <div class="maincontainer">
   <div class="firstcontainer ">
-   <div class=" first">
-
-     <i class='bx bxs-map bx-sm'  style="color:white"></i>
-     <input class="weatherinput" id="city" type="text" name="cityname" id="city" placeholder="Enter the place name">
-     <i class='bx bx-search-alt bx-sm search' style="color:white"></i>
+      <h1 class="toptitle">WEATHER</h1>
+   <div class="first">
+  
+      <i class='bx bxs-map bx-sm'  style="color:white"></i>
+      <input class="weatherinput" id="city" type="text" name="cityname" id="city" placeholder="Enter the place name">
+      <i class='bx bx-search-alt bx-sm search' style="color:white"></i>
+  
     </div>
   
     <div class="secondcontainer display">
@@ -226,7 +235,7 @@ background-size: cover;
   </div> 
     
 </div>  
- </div>
+
    <script src="script.js"></script>
 </body>
 </html>
